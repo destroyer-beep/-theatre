@@ -1,3 +1,49 @@
-body {
-  background-color: aliceblue;
+:root {
+  --grey: rgba(51, 51, 51, 100%);
+  --grey-90: rgba(51, 51, 51, 90%);
+  --grey-75: rgba(51, 51, 51, 75%);
+  --grey-65: rgba(51, 51, 51, 65%);
+  --gold: #D1A954;
+  --white: #FFFFFF;
+  --white-50: rgba(255, 255, 255, 50%);
+  --input-background: #616161;
+  --text: #C4C4C4;
+  --text-footer: #989898;
+  
+  ;
+}
+
+@font-face {
+  font-family: "OpenSans-Regular";
+  src: url("../fonts/OpenSans-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "OpenSans-SemiBold";
+  src: url("../fonts/OpenSans-SemiBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "OpenSans-Bold";
+  src: url("../fonts/OpenSans-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "OpenSansCondensed-Light";
+  src: url("../fonts/OpenSansCondensed-Light.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "OpenSansCondensed-Bold";
+  src: url("../fonts/OpenSansCondensed-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
 }
