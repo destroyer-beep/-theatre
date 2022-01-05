@@ -1,19 +1,36 @@
 const navbarOpen = document.querySelector('.navbar__open');
 const navbarClose = document.querySelector('.navbar__close');
 const navbar = document.querySelector('.navbar');
+const navbarItems = document.querySelector('.navbar__items');
+const body = document.querySelector('body');
+const navbarLink = document.querySelectorAll('.navbar__item_link');
 
 navbarOpen.addEventListener('click', () => {
-  navbar.classList.add('navbar__active');
+  navbar.classList.add('nav__show');
+  body.classList.add('scroll__block');
 })
 
 navbarClose.addEventListener('click', () => {
-  navbar.classList.remove('navbar__active');
+  navbar.classList.remove('nav__show');
+   body.classList.remove('scroll__block');
+})
+
+navbarLink.forEach(item => {
+  item.addEventListener('click', (e) => {
+    if (navbar.classList.contains('nav__show')) {
+    navbar.classList.remove('nav__show');
+    body.classList.remove('scroll__block');
+    } else {
+        return;
+    }
+  })
 })
 
 const swiper = new Swiper('.swiper', {
   direction: 'horizontal',
   loop: false,
   slidesPerView: 'auto',
+  paginatiom: 'none',
 });
 
 const swipes = document.querySelectorAll('.swiper__slide');
@@ -52,3 +69,11 @@ swipes.forEach(item => {
     swiperIcon.classList.add('swiper__hidden');
   })
 })
+
+window.onscroll = function() {
+    if(window.pageYOffset > 100) {
+      navbarItems.classList.add('nav__background');
+    } else {
+      navbarItems.classList.remove('nav__background');
+    }
+};
